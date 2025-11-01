@@ -3,22 +3,16 @@
 
 ## `.venv`使用手册
 |Command |Function ||
-|:------|:------|------|   
+|:------|:------|------|  
+|`uv init`| 直接生成(.gitignore, python-version, README.md, pyproject.toml)||
 |`uv venv` | 创建虚拟环境 ||
 |`source .venv/bin/activate` |激活 ||
-|`uv (pip) install <packages>`|装包 ||
-|`deactivate`| 解除||
 |`uv sync`|synchronize, 同步下拉代码中的包||
+|`uv pip install <packages>`| 装包||
+|`deactivate`| 解除||
 |``|||
 
 遇到pull code，直接`uv sync`, `source .venv/bin/activate`。
-
-
-
-
-
-
-
 
 
 ## Conda 使用手册
@@ -39,6 +33,7 @@ conda deactivate        #解除
 |`conda create -n/--name myenv python=3.11`| 创造新环境||
 |`conda activate myenv`| 激活环境||
 |`conda deactivate`| 解除环境||
+|`conda create -f environment.yml`| -f: file. Create env from `yml` file||
 |``|||
 
 
@@ -61,3 +56,9 @@ conda deactivate        #解除
 pip install -r requirements.txt
 ```
 
+## Poetry
+
+创建项目：poetry new project_name
+安装依赖：poetry add package_name
+运行项目：poetry run python script.py
+激活虚拟环境：poetry shell

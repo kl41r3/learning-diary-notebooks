@@ -1,0 +1,99 @@
+%================= test.tex =================
+\documentclass[11pt,a4paper]{article}
+
+%---------- 宏包 ----------
+\usepackage[UTF8]{ctex}          % 中文
+\usepackage{amsmath,amssymb}     % 数学
+\usepackage{graphicx}            % 插图
+\usepackage{booktabs}            % 三线表
+\usepackage{listings}            % 代码
+\usepackage{xcolor}              % 高亮
+\usepackage{hyperref}            % 超链接
+
+%---------- 代码样式 ----------
+\lstset{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue!70},
+  commentstyle=\color{gray},
+  stringstyle=\color{orange},
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true,
+  frame=single,
+  language=Python
+}
+
+%---------- 正文 ----------
+\begin{document}
+
+\title{LaTeX 功能测试文档}
+\author{Kimi}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+这是一份用于测试 LaTeX 各项功能的简短文档，涵盖中文、公式、表格、图片、代码与参考文献。
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{中文支持}
+XeLaTeX 编译可直接输入中文：你好，世界！
+
+\section{数学公式}
+行内公式 $E=mc^2$，以及编号公式：
+\begin{equation}\label{eq:eu}
+\int_{-\infty}^{+\infty} e^{-x^2}\,\mathrm{d}x = \sqrt{\pi}.
+\end{equation}
+式~\eqref{eq:eu} 可通过 {\tt \textbackslash eqref} 引用。
+
+\section{表格与图片}
+表~\ref{tab:demo} 是一个三线表示例。
+
+\begin{table}[ht]
+\centering
+\caption{测试表格}
+\begin{tabular}{@{}lcr@{}}
+\toprule
+姓名 & 语文 & 数学 \\ \midrule
+张三 & 88 & 95 \\
+李四 & 92 & 87 \\ \bottomrule
+\end{tabular}
+\label{tab:demo}
+\end{table}
+
+图~\ref{fig:logo} 是 Overleaf 官方 logo（需联网，若编译失败可注释掉）。
+
+\begin{figure}[ht]
+\centering
+\caption{Overleaf Logo}
+\label{fig:logo}
+\end{figure}
+
+\section{代码高亮}
+下面给出快速排序的 Python 实现：
+
+\begin{lstlisting}[language=Python]
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr)//2]
+    left  = [x for x in arr if x < pivot]
+    mid   = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + mid + quicksort(right)
+\end{lstlisting}
+
+\section{参考文献}
+本文引用了一本经典教材~\cite{lamport1994latex}。
+
+\bibliographystyle{plain}
+\begin{thebibliography}{1}
+\bibitem{lamport1994latex}
+Leslie Lamport.
+\textit{\LaTeX: A Document Preparation System}. Addison-Wesley, 1994.
+\end{thebibliography}
+
+\end{document}
+%===========================================

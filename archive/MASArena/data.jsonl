@@ -1,0 +1,14 @@
+{"question": "Janet\u2019s ducks lay 20 eggs per day. She eats five for breakfast every morning and bakes muffins for her friends every day with six. She sells the remainder at the farmers' market daily for $3 per fresh duck egg. How much in dollars does she make every day at the farmers' market?", 
+"solution": "Janet's ducks lay 20 eggs per day. She uses 5 for breakfast and 6 for muffins, which totals 11 eggs. This leaves 20 - 11 = 9 eggs to sell at the farmers' market.\n\nShe sells these eggs for $3 each, so she makes 9 * $3 =  27 dollars every day at the farmers' market.\n#### 27", 
+"answer": "27", 
+"perturbation_type": "numerical substitution", 
+"seed_question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?", 
+"seed_solution": "Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer\u2019s market.\n#### 18", 
+"seed_answer": "18"}
+
+
+{"problem": "Find the smallest positive integer that is greater than $1$ and relatively prime to the product of the first 20 positive integers.  Reminder: two numbers are relatively prime if their greatest common divisor is 1.", 
+"level": "Level 5", 
+"type": "Prealgebra", 
+"solution": "Two numbers are relatively prime if they share no prime factors.  Therefore, the desired positive integer must not share any prime factors with the product of the first 20 positive integers.  So, every prime in the prime factorization of the desired positive integer is greater than 20, which means the smallest possible integer is $\\boxed{23}$."}
+

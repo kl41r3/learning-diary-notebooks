@@ -1,5 +1,10 @@
-# 没有首行标记来源则98%为手敲
+# This notebook is updated from time to time.
 
-这是一份不断更新的笔记，进行暂时的展示。
+The notebook:
+- records my learning progress
+- provides help for my friends
 
-可以先看`API_usage.md`这个文件。
+❗️ AI generated contents are marked with name of the llm. 
+
+
+

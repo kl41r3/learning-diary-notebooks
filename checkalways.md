@@ -1,1 +1,0 @@
-把pipreq从conda base卸载了，下次要用用pipx装，base不要污染
